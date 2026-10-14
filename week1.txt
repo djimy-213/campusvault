@@ -1,0 +1,61 @@
+uname -r------------------
+
+7.1.5+kali-amd64
+
+
+                                                                                                                   
+ cat /etc/os-release------------------
+ 
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+VERSION_ID="2026.3"
+VERSION="2026.3"
+VERSION_CODENAME=kali-rolling
+ID=kali
+ID_LIKE=debian
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+ANSI_COLOR="1;31"
+
+
+                                                                                                                   
+ whoami && id----------------------
+                 
+djimy
+uid=1000(djimy) gid=1000(djimy) groups=1000(djimy),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),101(netdev),102(scanner),114(wireshark),119(kaboxer),968(docker),979(bluetooth),999(lpadmin)
+
+
+                                                                                                              
+ ps aux | head -15------------------
+
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  28492 16916 ?        Ss   08:44   0:01 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    08:44   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    08:44   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/0:0H-kblockd]
+root          13  0.0  0.0      0     0 ?        I<   08:44   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        S    08:44   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    08:44   0:01 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    08:44   0:00 [rcu_exp_par_gp_kthread_worker/1]
+root          17  0.0  0.0      0     0 ?        S    08:44   0:00 [rcu_exp_gp_kthread_worker]
+
+
+                                                                                                              
+ ss -tlnp----------------------
+
+State       Recv-Q      Send-Q             Local Address:Port             Peer Address:Port      Process      
+LISTEN      0           80                     127.0.0.1:3306                  0.0.0.0:*                      
+
+
+                                                                                                              
+ free -h && nproc-----------------------------
+
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       3.5Gi        10Gi       485Mi       2.4Gi        11Gi
+Swap:          5.1Gi          0B       5.1Gi
