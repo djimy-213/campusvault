@@ -1,3 +1,8 @@
+WEEK1: <Harizi Djamal Eddine> <Oubara Abd El Moncif>
+
+
+
+
 uname -r------------------
 
 7.1.5+kali-amd64
@@ -210,3 +215,16 @@ alpine:latest        320994c3b997       8.42MB             0B
 hello-world:latest   e2ac70e7319a       10.1kB             0B    U   
 nginx:stable         3a8edbda21b6        163MB             0B        
                                                                 
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+# Security Answers :
+1. It proves that containers share the host's kernel instead of running their own kernel. This matters for security because a vulnerability in the host kernel could affect the containers running on it.
+2. With 127.0.0.1:8080:80, nginx is accessible only from the host computer. With -p 8080:80, Docker usually exposes the port on all host network interfaces, so other devices that can reach the host over the network may access the server.
+3. The script could contain malicious commands, install unwanted software, or compromise the system with root privileges. Two ways to reduce the risk are:
+     - Download the script first and inspect its contents before executing it.
+     - Verify the script's authenticity and integrity, and use official installation instructions from a trusted source.
+4. A user in the Docker group can create privileged containers and mount the host's root filesystem using a command such as docker run -v /:/host .... This can allow the user to access or modify sensitive host files and potentially gain root-level control of the host.
+5. A fine-grained token provides limited permissions and can be restricted to one repository. If it is stolen, the potential damage is reduced compared with exposing an account password. It can also be revoked without changing the account password.
+
