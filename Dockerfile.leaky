@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+WORKDIR /code
+COPY fake-config.txt .
+RUN cat fake-config.txt > /dev/null
+RUN rm fake-config.txt
+ARG API_KEY
+RUN echo "configured with a key of length ${#API_KEY}"
